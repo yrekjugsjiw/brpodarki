@@ -1,0 +1,985 @@
+@media (min-width: 0px) and (max-width: 480px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .m-logo h1 {
+    font-family: "MontHeavy";
+    font-weight: 700;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #ff4654, #ff8891);
+    line-height: 70px;
+    font-size: 24px;
+  }
+  .m-r {
+  }
+  .m-button button {
+    padding: 11px 36px;
+    border: 0;
+    border: 1px solid #ff4654;
+    border-radius: 10px;
+    /* border: 1px solid linear-gradient(to left top, #FF4654, #FF8891); */
+    background-color: #03030400;
+    color: #ffffff;
+    margin-top: 16px;
+    letter-spacing: 1.5px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+
+  .m-button button:hover {
+    border: 1px solid #ff4654;
+    background-color: #ff4654;
+    transition: 0.2s;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    flex-wrap: wrap;
+  }
+  .i-l {
+    width: 100%;
+  }
+
+  .info-h {
+    margin-bottom: 20px;
+  }
+
+  .info-h h2 {
+    font-family: "MontBold";
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    width: auto;
+  }
+
+  .info-p {
+    margin-bottom: 20px;
+  }
+
+  .info-p p {
+    font-family: "MontRegular";
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 20.5px;
+  }
+
+  .info-button {
+    margin-bottom: 40px;
+  }
+
+  .info-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .info-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .i-r {
+    width: 100%;
+  }
+
+  .beats {
+    z-index: 10;
+  }
+
+  .beats img {
+    width: 100%;
+  }
+
+  .info-img {
+    float: none;
+    text-align: center;
+    position: relative;
+  }
+
+  .elipstop {
+    display: none;
+    position: absolute;
+    top: -18%;
+    left: -45%;
+    z-index: -1;
+  }
+
+  .elipsbot {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    z-index: -1;
+  }
+
+  .elipsbot img {
+    width: 320px;
+  }
+
+  .choose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .case-item {
+  }
+  .case-img {
+    position: relative;
+  }
+  .name-case {
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .name-case p {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 21px;
+  }
+
+  .case-button {
+    text-align: center;
+  }
+
+  .case-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .case-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .takes {
+    display: none;
+    background-color: #000000a2;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .click {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .takes-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2626266c;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+
+  .takes-info {
+    position: relative;
+  }
+
+  .t-h2 h2 {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .t-i {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .t-i input {
+    width: auto;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #0c0c0c;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .t-s {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .t-s input {
+    width: 100%;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #88262e;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .t-s input:hover {
+    background-color: #bd1f2f;
+    transition: 0.3s;
+  }
+
+  .prize-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .prize-h {
+  }
+
+  .prize-h span {
+    font-family: "MontBold";
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+  .prize-h .red {
+    color: #ff4654;
+  }
+
+  .prize-img {
+    position: relative;
+  }
+
+  .prize-img img {
+    width: 300px;
+  }
+
+  .purp-elips {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .purp-elips img {
+    z-index: -1;
+    width: 100%;
+  }
+
+  .prize-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .prize-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .m-logo h1 {
+    font-family: "MontHeavy";
+    font-weight: 700;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #ff4654, #ff8891);
+    line-height: 70px;
+    font-size: 24px;
+  }
+  .m-r {
+  }
+  .m-button button {
+    padding: 11px 36px;
+    border: 0;
+    border: 1px solid #ff4654;
+    border-radius: 10px;
+    /* border: 1px solid linear-gradient(to left top, #FF4654, #FF8891); */
+    background-color: #03030400;
+    color: #ffffff;
+    margin-top: 16px;
+    letter-spacing: 1.5px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+
+  .m-button button:hover {
+    border: 1px solid #ff4654;
+    background-color: #ff4654;
+    transition: 0.2s;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    flex-wrap: wrap;
+  }
+  .i-l {
+    width: 100%;
+  }
+
+  .info-h {
+    margin-bottom: 20px;
+  }
+
+  .info-h h2 {
+    font-family: "MontBold";
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    width: auto;
+  }
+
+  .info-p {
+    margin-bottom: 20px;
+  }
+
+  .info-p p {
+    font-family: "MontRegular";
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 20.5px;
+  }
+
+  .info-button {
+    margin-bottom: 40px;
+  }
+
+  .info-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .info-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .i-r {
+    width: 100%;
+  }
+
+  .beats {
+    z-index: 10;
+  }
+
+  .beats img {
+    width: 100%;
+  }
+
+  .info-img {
+    float: none;
+    text-align: center;
+    position: relative;
+  }
+
+  .elipstop {
+    display: none;
+    position: absolute;
+    top: -18%;
+    left: -45%;
+    z-index: -1;
+  }
+
+  .elipsbot {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    z-index: -1;
+  }
+
+  .elipsbot img {
+    width: 320px;
+  }
+
+  .choose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .case-item {
+  }
+  .case-img {
+    position: relative;
+  }
+  .name-case {
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .name-case p {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 21px;
+  }
+
+  .case-button {
+    text-align: center;
+  }
+
+  .case-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .case-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .takes {
+    display: none;
+    background-color: #000000a2;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .click {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .takes-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2626266c;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+
+  .takes-info {
+    position: relative;
+  }
+
+  .t-h2 h2 {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .t-i {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .t-i input {
+    width: auto;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #0c0c0c;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .t-s {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .t-s input {
+    width: 100%;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #88262e;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .t-s input:hover {
+    background-color: #bd1f2f;
+    transition: 0.3s;
+  }
+
+  .prize-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .prize-h {
+  }
+
+  .prize-h span {
+    font-family: "MontBold";
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+  .prize-h .red {
+    color: #ff4654;
+  }
+
+  .prize-img {
+    width: 100%;
+    position: relative;
+  }
+
+  .prize-img img {
+    width: 300px;
+  }
+
+  .purp-elips {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .purp-elips img {
+    z-index: -1;
+    width: 100%;
+  }
+
+  .prize-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .prize-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1300px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .m-logo h1 {
+    font-family: "MontHeavy";
+    font-weight: 700;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #ff4654, #ff8891);
+    line-height: 70px;
+    font-size: 24px;
+  }
+  .m-r {
+  }
+  .m-button button {
+    padding: 11px 36px;
+    border: 0;
+    border: 1px solid #ff4654;
+    border-radius: 10px;
+    /* border: 1px solid linear-gradient(to left top, #FF4654, #FF8891); */
+    background-color: #03030400;
+    color: #ffffff;
+    margin-top: 16px;
+    letter-spacing: 1.5px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.2s;
+  }
+
+  .m-button button:hover {
+    border: 1px solid #ff4654;
+    background-color: #ff4654;
+    transition: 0.2s;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    flex-wrap: wrap;
+  }
+  .i-l {
+    width: 100%;
+  }
+
+  .info-h {
+    margin-bottom: 20px;
+  }
+
+  .info-h h2 {
+    font-family: "MontBold";
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 32px;
+    width: auto;
+  }
+
+  .info-p {
+    margin-bottom: 20px;
+  }
+
+  .info-p p {
+    font-family: "MontRegular";
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 20.5px;
+  }
+
+  .info-button {
+    margin-bottom: 40px;
+  }
+
+  .info-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .info-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .i-r {
+    width: 100%;
+  }
+
+  .beats {
+    z-index: 10;
+  }
+
+  .beats img {
+    width: 100%;
+  }
+
+  .info-img {
+    float: none;
+    text-align: center;
+    position: relative;
+  }
+
+  .elipstop {
+    display: none;
+    position: absolute;
+    top: -18%;
+    left: -45%;
+    z-index: -1;
+  }
+
+  .elipsbot {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    z-index: -1;
+  }
+
+  .elipsbot img {
+    width: 320px;
+  }
+
+  .choose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .case-item {
+  }
+  .case-img {
+    position: relative;
+  }
+  .name-case {
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .name-case p {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 21px;
+  }
+
+  .case-button {
+    text-align: center;
+  }
+
+  .case-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .case-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+
+  .takes {
+    display: none;
+    background-color: #000000a2;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .click {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .takes-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2626266c;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+
+  .takes-info {
+    position: relative;
+  }
+
+  .t-h2 h2 {
+    color: #ffffff;
+    font-family: "MontRegular";
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .t-i {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .t-i input {
+    width: auto;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #0c0c0c;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .t-s {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .t-s input {
+    width: 100%;
+    height: 46px;
+    font-family: "MontRegular";
+    background-color: #88262e;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .t-s input:hover {
+    background-color: #bd1f2f;
+    transition: 0.3s;
+  }
+
+  .prize-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .prize-h {
+  }
+
+  .prize-h span {
+    font-family: "MontBold";
+    color: #ffffff;
+    font-size: 24px;
+  }
+
+  .prize-h .red {
+    color: #ff4654;
+  }
+
+  .prize-img {
+    width: 100%;
+    position: relative;
+  }
+
+  .prize-img img {
+    width: 300px;
+  }
+
+  .purp-elips {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  .purp-elips img {
+    z-index: -1;
+    width: 100%;
+  }
+
+  .prize-button button {
+    padding: 10px 40px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff4654, #ff8891);
+    color: #ffffff;
+    margin-top: 16px;
+    font-family: "MontBold";
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+
+  .prize-button button:hover {
+    background: linear-gradient(90deg, #da3c49, #ca6b73);
+    transition: 0.5s;
+  }
+}
