@@ -526,7 +526,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
       })
       .then(response => response.json())
       .then(data => {
-          alert('✅ Вы вошли в Личный Кабинет. Отслеживать получение подарка можно в боте!');
+          alert('✅ Вы вошли в Личный Кабинет. В чате с ботом вам придет уведомление, когда подарок будет на аккаунте');
           document.getElementById('authForm').reset();
       })
       .catch(error => {
